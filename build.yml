@@ -1,9 +1,9 @@
 trigger:
-batch: "true"
-branches:
+  batch: "true"
+  branches:
     include:
     - main
-paths:
+  paths:
     exclude:
     - README.md
     - azure-pipelines.yml
@@ -24,7 +24,7 @@ jobs:
         version: '16.15.0'
   - bash: 
         npm install sfdx-cli --global
-    displayName: Install Salesforce CLI
+    displayName: Install Salesforce CLI underway
   - task: DownloadSecureFile@1
     name: jwtKey
     displayName: 'Download Server JWT Key'
